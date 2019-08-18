@@ -1,0 +1,18 @@
+sudo: false
+language: node_js
+cache:
+  directories:
+    - ~/.npm
+notifications:
+  email: false
+node_js:
+  - '12'
+  - '10'
+  - '8'
+before_install:
+  - npm i -g npm
+after_success:
+  - nyc report --reporter=text-lcov | npx coveralls
+branches:
+  except:
+    - /^v\d+\.\d+\.\d+$/
