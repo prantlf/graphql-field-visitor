@@ -49,10 +49,9 @@
   },
   "keywords": [
     "graphql",
-    "directive",
-    "graphql-directive",
+    "visitor",
+    "graphql-visitor",
     "schema",
-    "field",
-    "resolve"
+    "field"
   ]
 }
