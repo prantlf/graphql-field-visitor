@@ -3,7 +3,8 @@
 [![NPM version](https://badge.fury.io/js/graphql-field-visitor.png)](http://badge.fury.io/js/graphql-field-visitor)
 [![Build Status](https://travis-ci.org/prantlf/graphql-field-visitor.png)](https://travis-ci.org/prantlf/graphql-field-visitor)
 [![Coverage Status](https://coveralls.io/repos/github/prantlf/graphql-field-visitor/badge.svg?branch=master)](https://coveralls.io/github/prantlf/graphql-field-visitor?branch=master)
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/1f99496ff47e41c4aac8050e2ffaef15)](https://www.codacy.com/app/prantlf/graphql-field-visitor?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=prantlf/graphql-field-visitor&amp;utm_campaign=Badge_Grade)
+[![Maintainability](https://api.codeclimate.com/v1/badges/e86a82b760b04b57fd27/maintainability)](https://codeclimate.com/github/prantlf/graphql-field-visitor/maintainability)
+[![codebeat badge](https://codebeat.co/badges/e615bac8-23a2-4cb9-9e62-f6bf6556f053)](https://codebeat.co/projects/github-com-prantlf-graphql-field-visitor-master)
 [![devDependency Status](https://david-dm.org/prantlf/graphql-field-visitor/dev-status.svg)](https://david-dm.org/prantlf/graphql-field-visitor#info=devDependencies)
 [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
@@ -15,12 +16,14 @@ Iterates over all fields in all types declared in a GraphQL schema. It can be us
 
 ```js
 const { visitFields } = require('graphql-field-visitor')
+
 const schema = GraphQLSchema({
   query: new GraphQLObjectType({
     name: 'Query',
     fields: () => { ... }
   })
 })
+
 // Prints all fields prefixed by their parent type.
 visitFields(schema, (field, type) =>
   console.log(`${type.name}: ${field.name}`))
@@ -51,7 +54,9 @@ Iterates recursively over all fields in all types declared in a GraphQL schema. 
 
 ```js
 const { visitFields } = require('graphql-field-visitor')
+
 const schema = ...
+
 visitFields(schema, (field, type) => ...)
 ```
 
