@@ -1,6 +1,6 @@
 {
   "name": "graphql-field-visitor",
-  "version": "0.0.1",
+  "version": "0.0.0-development",
   "description": "Iterates over all fields in all types declared in a GraphQL schema.",
   "author": {
     "name": "Ferdinand Prantl",
