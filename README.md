@@ -17,7 +17,7 @@ Iterates over all fields in all types declared in a GraphQL schema. It can be us
 ```js
 const { visitFields } = require('graphql-field-visitor')
 
-const schema = GraphQLSchema({
+const schema = new GraphQLSchema({
   query: new GraphQLObjectType({
     name: 'Query',
     fields: () => { ... }
